@@ -16,15 +16,25 @@ function JoinTheEvent() {
                 backgroundPosition: 'center',
                 minHeight: '100vh',
                 width: '100%',
-                color: 'white'
+                bgcolor: 'background.default',
+                color: 'text.primary',
+                '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    backgroundColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(0,0,0,0.7)' : 'rgba(255,255,255,0.3)',
+                    zIndex: 0
+                }
             }} >
-                <CssBaseline />
-                <Container fixed={false}>
+                <Container fixed={false} sx={{ position: 'relative', zIndex: 1 }}>
 
 
-                    <Box sx={{ mt: 13,display: 'flex',flexDirection:"column", justifyContent: 'center', alignItems: 'center' }} >
-                        <Typography variant={"h5"} fontFamily={"sans-serif"} sx={{mt:"2rem"}}>Our Events</Typography>
-                        <Typography variant="h5" fontFamily={"sans"} component="div" sx={{mt:"2rem",fontStyle:"italic"}}>
+                    <Box sx={{ mt: 13,display: 'flex',flexDirection:"column", justifyContent: 'center', alignItems: 'center', position: 'relative', zIndex: 1 }} >
+                        <Typography variant={"h5"} fontFamily={"sans-serif"} sx={{mt:"2rem"}} color="inherit">Our Events</Typography>
+                        <Typography variant="h5" fontFamily={"sans"} component="div" sx={{mt:"2rem",fontStyle:"italic"}} color="inherit">
                             Join Us at our Disco Club for our Futuristic Enjoyments.
                             <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, fugiat harum iusto
                                 possimus quaerat saepe totam? Beatae debitis error, fugiat impedit ipsam minus nulla
