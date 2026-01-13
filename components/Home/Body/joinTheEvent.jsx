@@ -16,7 +16,7 @@ function JoinTheEvent() {
                 backgroundPosition: 'center',
                 minHeight: '100vh',
                 width: '100%',
-                bgcolor: 'background.default',
+
                 color: 'text.primary',
                 '&::before': {
                     content: '""',

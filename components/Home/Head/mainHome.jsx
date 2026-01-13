@@ -1,5 +1,5 @@
 import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
+import { motion } from "motion/react"
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import {Typography} from "@mui/material";
@@ -10,14 +10,14 @@ export default function FixedContainer() {
     return (
         <>
         <Box sx={{
-            backgroundImage: `url(${backgroundImage})`, // Or your local asset
+            backgroundImage: `url(${backgroundImage})`,
             backgroundAttachment: 'fixed',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             minHeight: '100vh',
             width: '100%',
-            bgcolor: 'background.default',
-            color: 'text.primary',
+
+
             position: 'relative',
             '&::before': {
                 content: '""',
@@ -26,7 +26,7 @@ export default function FixedContainer() {
                 left: 0,
                 width: '100%',
                 height: '100%',
-                backgroundColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(0,0,0,0.7)' : 'rgba(255,255,255,0.3)',
+                backgroundColor: (theme) => theme.palette.mode === 'dark' ? '' : '',
                 zIndex: 0
             }
         }} >
@@ -36,7 +36,10 @@ export default function FixedContainer() {
                 <Box sx={{ mt: 2,display: 'flex',flexDirection:"column", justifyContent: 'center', alignItems: 'center',minHeight:'100vh', position: 'relative', zIndex: 1 }} >
                     <Typography variant={"h5"} fontFamily={"serif"} color="inherit">Welcome to Irfan Club</Typography>
                     <Typography variant="h2" fontFamily={"sans-serif"} component="div" sx={{mt:"2rem"}} color="inherit">
-                       Welcome to the amazing world of Irfan
+                        <motion.h1 initial={{
+                            y:25,opacity:0}}
+                        animate={{y:0,opacity:1}}
+                        transition={{duration:1,ease:"circInOut"}}>Welcome to the amazing world of Irfan</motion.h1>
                     </Typography>
                 </Box>
 

@@ -1,0 +1,20 @@
+/* Google Translate styles */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+.goog-te-gadget-icon {
+    display: none !important;
+}
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+.goog-te-menu-value {
+    margin: 0 4px !important;
+}

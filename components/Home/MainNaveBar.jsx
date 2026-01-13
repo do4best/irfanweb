@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import MainDark from '../Home/Head/mainDark.jsx';
+import MainTranslation from "./Head/Translation/mainTranslation.jsx";
 
 const pages = ['Products', 'Pricing', 'Blog'];
 
@@ -43,7 +44,7 @@ function MainNaveBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        IRFAN
+                        IRFAN Club
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -96,7 +97,7 @@ function MainNaveBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        IRFAN
+                        IRFAN Club
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
@@ -110,8 +111,9 @@ function MainNaveBar() {
                         ))}
                     </Box>
 
-                    <Box sx={{ flexGrow: 0 }}>
+                    <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' ,gap:1}}>
                         <MainDark />
+                        <MainTranslation/>
                     </Box>
                 </Toolbar>
             </Container>
