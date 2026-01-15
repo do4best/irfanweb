@@ -1,29 +1,29 @@
 import React from 'react';
-import newIrfan from '../../../src/assets/newIrfan.jpg';
+import ourRec from '../../../src/assets/recods.jpg';
 import Box from "@mui/material/Box";
 
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import MainNaveBar from "../MainNaveBar.jsx";
 import {Typography} from "@mui/material";
-function JoinTheEvent() {
+function OurRecords() {
     return (
         <>
             <Box sx={{
-                backgroundImage: `url(${newIrfan})`, // Or your local asset
+                backgroundImage: `url(${ourRec})`, // Or your local asset
                 backgroundAttachment: 'fixed',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 minHeight: '100vh',
                 width: '100%',
 
-                color: 'text.primary',
+                color: 'primary.main',
 
             }} >
                 <Container fixed={false} sx={{ position: 'relative', zIndex: 1 }}>
 
 
-                    <Box sx={{ mt: 13,display: 'flex',flexDirection:"column", justifyContent: 'center', alignItems: 'center', position: 'relative', zIndex: 1 }} >
+                    <Box sx={{display: 'flex',flexDirection:"column", justifyContent: 'center', alignItems: 'center', position: 'relative', zIndex: 1 }} >
                         <Typography variant={"h3"}  sx={{mt:"2rem"}} color="inherit">Our Events</Typography>
                         <Typography variant="h5"  component="div" sx={{mt:"2rem"}} color="inherit">
                             Join Us at our Disco Club for our Futuristic Enjoyments.
@@ -47,4 +47,4 @@ function JoinTheEvent() {
     );
 }
 
-export default JoinTheEvent;
+export default OurRecords;

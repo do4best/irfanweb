@@ -2,7 +2,7 @@ import {amber} from "@mui/material/colors";
 
 const theme = {
     palette:{
-        primary:amber,
+        primary:"#d32f2f",
     }
 }
 export default theme;

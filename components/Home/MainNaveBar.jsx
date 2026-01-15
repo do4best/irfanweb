@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import MainDark from '../Home/Head/mainDark.jsx';
 import MainTranslation from "./Head/Translation/mainTranslation.jsx";
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Our Events', 'Top Songs', 'Contact us'];
 
 function MainNaveBar() {
     const [anchorElNav, setAnchorElNav] = useState(null);

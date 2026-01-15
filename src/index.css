@@ -1,0 +1,18 @@
+@font-face{
+    font-family: 'Mex';
+    src: url('./assets/fonts/Mex.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Bud';
+    src: url('./assets/fonts/bud.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+h1{
+    font-family: Mex , sans-serif;
+}
+h3{
+    font-family: bud , sans-serif;
+}

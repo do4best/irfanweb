@@ -5,8 +5,12 @@ import Container from '@mui/material/Container';
 import {Typography} from "@mui/material";
 import backgroundImage from '../../../src/assets/irfan.jpg';
 import MainNaveBar from "../MainNaveBar.jsx";
-import JoinTheEvent from "../Body/joinTheEvent.jsx"; // Import your image
+import JoinTheEvent from "../Body/joinTheEvent.jsx";
+import OurRecords from "../footer/ourRecords.jsx";
+import SocialLinks from "../footer/socialLinks.jsx";
+import theme from "./theme.js"; // Import your image
 export default function FixedContainer() {
+
     return (
         <>
         <Box sx={{
@@ -19,23 +23,14 @@ export default function FixedContainer() {
 
 
             position: 'relative',
-            '&::before': {
-                content: '""',
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                backgroundColor: (theme) => theme.palette.mode === 'dark' ? '' : '',
-                zIndex: 0
-            }
+
         }} >
             <Container fixed={false} sx={{ position: 'relative', zIndex: 1 }}>
 
                     <MainNaveBar/>
                 <Box sx={{ mt: 2,display: 'flex',flexDirection:"column", justifyContent: 'center', alignItems: 'center',minHeight:'100vh', position: 'relative', zIndex: 1 }} >
-                    <Typography variant={"h5"} fontFamily={"serif"} color="inherit">Welcome to Irfan Club</Typography>
-                    <Typography variant="h2" fontFamily={"sans-serif"} component="div" sx={{mt:"2rem"}} color="inherit">
+                    <Typography variant={"h3"}>Welcome to Irfan Club</Typography>
+                    <Typography variant="h2"  component="div" sx={{mt:"2rem"}} >
                         <motion.h1 initial={{
                             y:25,opacity:0}}
                         animate={{y:0,opacity:1}}
@@ -46,6 +41,8 @@ export default function FixedContainer() {
 
             </Container>
             <JoinTheEvent/>
+            <OurRecords/>
+            <SocialLinks/>
         </Box>
 
         </>

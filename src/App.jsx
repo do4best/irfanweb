@@ -8,7 +8,7 @@ import { amber } from "@mui/material/colors";
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 function App() {
-    const [mode, setMode] = useState('light');
+    const [mode, setMode] = useState('dark');
 
     const colorMode = useMemo(() => ({
         toggleColorMode: () => {
@@ -20,6 +20,16 @@ function App() {
         palette: {
             mode,
             primary: amber,
+            background: {
+                default: mode === 'dark' ? '#121212' : '#fff',
+            }
+        },
+        typography: {
+            fontFamily: ['Roboto', 'sans-serif','Mex'].join(','),
+            h3:{
+                fontFamily: ['Bud', 'serif'].join(','),
+                fontWeight: 500,
+            }
         },
     }), [mode]);
 

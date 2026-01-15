@@ -8,7 +8,7 @@ import React, {createContext, useContext, useEffect} from "react";
 function CreateDark() {
     let theme=useContext(BreateDark)
     useEffect(()=>{
-        document.body.style.backgroundColor="black"
+        document.body.style.backgroundColor="primary.main"
         return ()=>{
             document.body.style.backgroundColor="white"
         }
