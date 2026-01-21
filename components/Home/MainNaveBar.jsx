@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import MainDark from '../Home/Head/mainDark.jsx';
 import MainTranslation from "./Head/Translation/mainTranslation.jsx";
+import {NavLink} from "react-router";
 
 const pages = ['Our Events', 'Top Songs', 'Contact us'];
 
@@ -106,7 +107,7 @@ function MainNaveBar() {
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'inherit', display: 'block' }}
                             >
-                                {page}
+                                    {page}
                             </Button>
                         ))}
                     </Box>
