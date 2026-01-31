@@ -14,9 +14,9 @@ function MainTranslation() {
         window.googleTranslateElementInit = () => {
             if (window.google && window.google.translate && !document.querySelector('.goog-te-combo')) {
                 // Set cookie for Finnish translation before initialization
-                if (!document.cookie.includes('googtrans')) {
-                    document.cookie = 'googtrans=/en/fi; path=/';
-                }
+                // if (!document.cookie.includes('googtrans')) {
+                //     document.cookie = 'googtrans=/en/fi; path=/';
+                // }
 
                 new window.google.translate.TranslateElement({
                     pageLanguage: 'en',

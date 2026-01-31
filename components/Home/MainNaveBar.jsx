@@ -100,7 +100,9 @@ function MainNaveBar() {
                     >
                         IRFAN Club
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },
+                    justifyContent:`center`,
+                    gap:2}}>
                         {pages.map((page) => (
                             <Button
                                 key={page}
