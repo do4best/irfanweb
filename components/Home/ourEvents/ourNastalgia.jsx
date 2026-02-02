@@ -30,13 +30,29 @@ function OurNastalgia() {
         },
     }}>
         <Typography variant="h3" textAlign={"center"} component="div" sx={{ mt: 5, mb: 30 }}>Our Nastalgia</Typography>
-        <Grid container spacing={2}>
-        <Grid size={8}>
-           <Typography variant="h5" textAlign={"center"} component="div" sx={{ mt: 5, mb: 30 }}>Fin This is Great</Typography>
-        </Grid>
-        </Grid>
-    </Box>
+        <Box
+            sx={{
+                border: "2px dashed #fff",
+                borderRadius: 1,
+                px: 4,
+                py: 3,
+                maxWidth: '50%',
+                width: "100%",
+                mx: "auto",          // was mx: 2
+                backgroundColor: "rgba(0,0,0,0.35)",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        > <Typography variant={"h2"} textAlign={"center"} component="div" sx={{ mt: 5, mb: 30 }}>
+            <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consectetur dicta esse fugit iste itaque
 
+            </div>
+         </Typography>
+    </Box>
+    </Box>
         </>
     );
 }

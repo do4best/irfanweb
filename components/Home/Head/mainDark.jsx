@@ -13,10 +13,10 @@ function MainDark() {
         <Button
             sx={{ ml: 1, color: 'inherit' }}
             onClick={colorMode.toggleColorMode}
-            variant="outlined"
+            variant="contained"
             startIcon={theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
         >
-            {theme.palette.mode === 'dark' ? 'Light' : 'Dark'}
+            {theme.palette.mode === 'dark' ? 'light' : 'dark'}
         </Button>
     );
 }

@@ -24,8 +24,6 @@ export default function FixedContainer() {
             backgroundPosition: 'center',
             minHeight: '100vh',
             width: '100%',
-
-
             position: 'relative',
 
         }} >

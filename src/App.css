@@ -18,3 +18,11 @@ body {
 .goog-te-menu-value {
     margin: 0 4px !important;
 }
+
+/* Ensure the text is visible in dark mode */
+.goog-te-menu-value span,
+.goog-te-gadget-simple,
+.goog-te-gadget-simple span,
+.goog-te-gadget {
+    color: #fff !important;
+}
