@@ -11,9 +11,10 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import MainDark from '../Home/Head/mainDark.jsx';
 import MainTranslation from "./Head/Translation/mainTranslation.jsx";
-import {NavLink} from "react-router";
+import {Link, NavLink} from "react-router";
+import OurEvents from "./ourEvents/OurEvents.jsx";
 
-const pages = ['Our Events', 'Top Songs', 'Contact us'];
+const pages = [<Link to="/OurEvents">Our Events</Link>, 'Top Songs', 'Contact us'];
 
 function MainNaveBar() {
     const [anchorElNav, setAnchorElNav] = useState(null);

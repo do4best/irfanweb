@@ -29,7 +29,7 @@ export default function FixedContainer() {
         }} >
             <Container fixed={false} sx={{ position: 'relative', zIndex: 1 }}>
 
-                    <MainNaveBar/>
+
                 <Box sx={{ mt: 2,display: 'flex',flexDirection:"column", justifyContent: 'center', alignItems: 'center',minHeight:'100vh', position: 'relative', zIndex: 1 }} >
 
                     <Typography variant="h3"  component="div" sx={{mt:"1rem"}} >
@@ -57,7 +57,7 @@ export default function FixedContainer() {
             <OurPlayList/>
             <OurNastalgia/>
             <OurRecords/>
-            <SocialLinks/>
+
         </Box>
 
         </>

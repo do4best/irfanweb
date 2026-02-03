@@ -3,8 +3,10 @@ import './App.css'
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
 import React, { useState, useMemo, createContext } from 'react';
 import { amber } from "@mui/material/colors";
-import {BrowserRouter, Route, Routes} from "react-router";
+import { Route, Routes} from "react-router";
 import OurEvents from "../components/Home/ourEvents/OurEvents.jsx";
+import MainNaveBar from "../components/Home/MainNaveBar.jsx";
+import SocialLinks from "../components/Home/footer/socialLinks.jsx";
 
 // This allows any button in your app to toggle the theme
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
@@ -36,18 +38,21 @@ function App() {
     }), [mode]);
 
     return (
+
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
-                <BrowserRouter>
+
+                    <MainNaveBar/>
 <Routes>
     <Route path="/" element={<MainHome />} />
     <Route path="/OurEvents" element={<OurEvents />} />
 
 </Routes>
-                </BrowserRouter>
+<SocialLinks/>
             </ThemeProvider>
         </ColorModeContext.Provider>
+
     );
 }
 
