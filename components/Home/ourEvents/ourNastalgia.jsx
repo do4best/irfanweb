@@ -15,6 +15,8 @@ function OurNastalgia() {
         width: '100%',backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundColor: 'background.default',
+        color: 'text.primary',
         "&::before": {
             content: '""',
             position: "absolute",

@@ -12,11 +12,17 @@ import SocialLinks from "../components/Home/footer/socialLinks.jsx";
 export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 function App() {
-    const [mode, setMode] = useState('dark');
+    const [mode, setMode] = useState(() => {
+        return localStorage.getItem('themeMode') || 'dark';
+    });
 
     const colorMode = useMemo(() => ({
         toggleColorMode: () => {
-            setMode((prev) => (prev === 'light' ? 'dark' : 'light'));
+            setMode((prev) => {
+                const newMode = prev === 'light' ? 'dark' : 'light';
+                localStorage.setItem('themeMode', newMode);
+                return newMode;
+            });
         },
     }), []);
 
@@ -25,7 +31,7 @@ function App() {
             mode,
             primary: amber,
             background: {
-                default: mode === 'dark' ? '#121212' : '#fff',
+                default: mode === 'dark' ? '#121212' : '#f5f5f5',
             }
         },
         typography: {
@@ -49,7 +55,7 @@ function App() {
     <Route path="/OurEvents" element={<OurEvents />} />
 
 </Routes>
-<SocialLinks/>
+<SocialLinks/>  
             </ThemeProvider>
         </ColorModeContext.Provider>
 

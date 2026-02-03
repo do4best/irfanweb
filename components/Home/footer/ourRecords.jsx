@@ -16,8 +16,8 @@ function OurRecords() {
                 backgroundPosition: 'center',
                 minHeight: '100vh',
                 width: '100%',
-
-                color: 'primary.main',
+                backgroundColor: 'background.default',
+                color: 'text.primary',
 
             }} >
                 <Container fixed={false} sx={{ position: 'relative', zIndex: 1 }}>
